@@ -18,13 +18,13 @@ public class AlarmTest {
 
 	private PressureSensor probeValue(double value) {
 		PressureSensor sensor = mock(PressureSensor.class);
-		when(sensor.popNextPressurePsiValue()).thenReturn(value);
+		when(sensor.popNextValue()).thenReturn(value);
 		return sensor;
 	}
 
 	private PressureSensor probeValue(double value1, double value2) {
 		PressureSensor sensor = mock(PressureSensor.class);
-		when(sensor.popNextPressurePsiValue()).thenReturn(value1).thenReturn(value2);
+		when(sensor.popNextValue()).thenReturn(value1).thenReturn(value2);
 		return sensor;
 	}
 
